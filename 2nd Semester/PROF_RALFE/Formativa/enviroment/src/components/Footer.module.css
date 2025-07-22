@@ -1,0 +1,11 @@
+.container{
+    background: var(--cinza-escuro1);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.texto{
+    color: var(--Preto);
+    font-family: sans-serif;
+}

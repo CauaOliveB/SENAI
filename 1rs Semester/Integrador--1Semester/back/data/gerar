@@ -1,0 +1,75 @@
+import pandas as pd
+import os
+
+# Criando dados de exemplo para as ferramentas caseiras
+data = {
+    "tituloProduto": [
+        "2K25", "Cities Skylines 2", "Crusader Kings 3", "Dead By DayLight", "Euro Truck Simulator 2",
+        "Marvel Rivals", "Rainbow Siege", "Stardew Valley", "Stellaris","The Sims 4", "Victoria 3",
+        "Watch Dogs 2"
+    ],
+    "preco": [
+        349.90, 300, 179.99, 59.97, 61.99, 0.00, 84.99, 24.99, 143.99, 0.00,
+        179.99, 179.99
+    ],
+    "descricao": [
+        "Comande todas as quadras com autenticidade e realismo Desenvolvido pela ProPLAY,™ dando a você o controle máximo sobre como você joga no NBA 2K25. Defina seu legado no MyCAREER, MyTEAM, MyNBA e The W. Expresse-se com uma variedade de opções de personalização e explore uma cidade totalmente nova e rica em oportunidades."        "Parafusadeira portátil ideal para montagem de móveis.",
+        "Serra circular com lâmina de 7 polegadas, ideal para cortes precisos.",
+        "Seu legado espera por você. Escolha sua casa nobre e leve sua dinastia à grandeza em um épico da Idade Média que se estende por gerações. A guerra é apenas uma das muitas ferramentas para estabelecer seu reinado, pois a estratégia real requer habilidade diplomática especializada, domínio de seu reino e verdadeira astúcia. Crusader Kings III continua a popular série feita pelo Paradox Development Studio, apresentando o casamento amplamente aclamado de grande estratégia imersiva e RPG medieval profundo e dramático.",
+        "Dead by Daylight é um jogo de terror multiplayer (4vs1) onde um jogador assume o papel do Assassino selvagem, e os outros quatro jogadores jogam como Sobreviventes, tentando escapar do Assassino e evitar serem pegos, torturados e mortos.",
+        "Viaje pela Europa como o rei da estrada, um caminhoneiro que entrega cargas importantes em distâncias impressionantes! Com dezenas de cidades para explorar no Reino Unido, Bélgica, Alemanha, Itália, Holanda, Polônia e muitas outras, sua resistência, habilidade e velocidade serão levadas ao limite. Se você tem o que é preciso para fazer parte de uma força de caminhões de elite, sente-se ao volante e prove isso!",
+        "Marvel Rivals é um jogo de tiro PVP baseado em equipe de super-heróis! Monte um esquadrão de estrelas da Marvel, crie inúmeras estratégias combinando poderes para formar habilidades únicas de Team-Up e lute em campos de batalha destrutíveis e em constante mudança em todo o universo Marvel em constante evolução!",
+        "Tom Clancy's Rainbow Six® Siege é um jogo de tiro tático de elite, realista e baseado em equipe, onde o planejamento e a execução superiores triunfam. Possui jogabilidade de ataque contra defesa 5v5 e intenso combate corpo a corpo em ambientes destrutíveis.",
+        "Você herdou o antigo terreno da fazenda de seu avô em Stardew Valley. Armado com ferramentas de segunda mão e algumas moedas, você partiu para começar sua nova vida. Você pode aprender a viver da terra e transformar esses campos cobertos de vegetação em um lar próspero? Não será fácil. Desde que a Joja Corporation chegou à cidade, os velhos modos de vida praticamente desapareceram. O centro comunitário, que já foi o centro de atividades mais vibrante da cidade, agora está em ruínas. Mas o vale parece cheio de oportunidades. Com um pouco de dedicação, você pode ser o único a restaurar a grandeza de Stardew Valley!",
+        "Prepare-se para explorar, descobrir e interagir com uma infinidade de espécies enquanto viaja entre as estrelas. Forje um império galáctico enviando naves científicas para pesquisar e explorar, enquanto naves de construção constroem estações em torno de planetas recém-descobertos. Descubra tesouros enterrados e maravilhas galácticas enquanto gira uma direção para sua sociedade, criando limitações e evoluções para seus exploradores. Alianças se formarão e guerras serão declaradas.",
+        "Liberte sua imaginação e crie um mundo único de Sims que é uma expressão de você. Baixe gratuitamente e personalize cada detalhe, de Sims a casas e muito mais. Escolha como os Sims se parecem, agem e se vestem e decida como eles viverão a cada dia. Projete e construa casas incríveis para todas as famílias e decore com seus móveis e decorações favoritos. Viaje para diferentes bairros onde você pode conhecer outros Sims e aprender sobre suas vidas. Descubra belos locais com ambientes distintos e embarque em aventuras espontâneas. Gerencie os altos e baixos da vida cotidiana dos Sims e veja o que acontece quando você joga cenários de sua própria vida real. Conte suas histórias do seu jeito enquanto desenvolve relacionamentos, busca carreiras e aspirações de vida e mergulha neste jogo extraordinário, onde as possibilidades são infinitas.",
+        "O Paradox Development Studio convida você a construir sua sociedade ideal no tumulto do emocionante e transformador século 19. Equilibre os interesses conflitantes em sua sociedade e ganhe seu lugar ao sol em Victoria 3, um dos jogos mais esperados da história da Paradox.",
+        "Este é um jogo de ação e aventura no qual os jogadores assumem o papel de um homem (Marcus Holloway) que une forças com um grupo de hackers com a intenção de expor a corrupção na área da baía de São Francisco. À medida que os jogadores exploram o ambiente de mundo aberto, eles podem completar objetivos baseados em missões, interagir com personagens e entrar em combate com criminosos e gangues rivais.",
+
+    ],
+    "imgProduto": [
+        f"c:\\images\\{titulo}.jpg" for titulo in [
+            "2K25", "Cities Skylines 2", "Crusader Kings 3", "Dead By DayLight", "Euro Truck Simulator 2",
+            "Marvel Rivals", "Rainbow Siege", "Stardew Valley", "Stellaris", "The Sims 4",
+            "Victoria 3", "Watch Dogs 2"
+        ]
+    ],
+    "catProduto": [
+        "Jogos Digitais", "Jogos Digitais", "Jogos Digitais", "Jogos Digitais",
+        "Jogos Digitais", "Jogos Digitais", "Jogos Digitais", "Jogos Digitais",
+        "Jogos Digitais", "Jogos Digitais", "Jogos Digitais", "Jogos Digitais",
+        "Jogos Digitais",
+    ],
+    "classProduto": [
+        "Novo", "Novo", "Novo", "Novo", "Novo",
+        "Novo", "Novo", "Novo", "Novo", "Novo",
+        "Novo", "Novo", "Novo", "Novo", "Novo",
+        "Novo", "Novo", "Novo", "Novo", "Novo",
+        "Novo", "Novo", "Novo", "Novo", "Novo",
+        "Novo", "Novo", "Novo", "Novo", "Novo",
+        "Novo", "Novo", "Novo", "Novo", "Novo",
+        "Novo", "Novo", "Novo", "Novo", "Novo",
+        "Novo", "Novo", "Novo", "Novo", "Novo",
+        "Novo", "Novo", "Novo"
+    ],
+    "exibirHome": [
+        True, True, True, True, True,
+        True, True, True, True, True,
+        True, True, True, True, True,
+        True, True, True, True, True,
+        True, True, True, True, True,
+        True, True, True, True, True,
+        True, True, True, True, True,
+        True, True, True, True, True,
+        True, True, True, True, True,
+        True, True, True
+    ]
+}
+
+df = pd.DataFrame(data)
+
+
+caminho_atual = os.getcwd()
+c = caminho_atual.replace("\\", "/")
+
+df.to_csv(c+"/data/ferramentas.csv", index=False)

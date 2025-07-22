@@ -1,0 +1,48 @@
+body {
+    background-color: #1A1F2D;
+}
+
+/* Links de Navegação */
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+header {
+    background-color: #1fc27b;
+    padding: 15px;
+}
+
+nav ul {
+    display: flex;
+    justify-content: center;
+    gap: 70px;
+    list-style: none;
+    font-family: Arial, sans-serif;
+}
+
+nav ul li a {
+    color: white;
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: bold;
+}
+main {
+    display: flex;
+    justify-content: space-between; 
+    align-items: center; 
+    padding: 20px;
+    gap:40px;
+}
+
+#statusSpace img {
+    width: 100%; 
+    max-width: 550px; 
+}
+
+#historySpace img{
+    width: 800px;
+    padding-top: 60px;
+}

@@ -1,0 +1,11 @@
+.container{
+    background-color:var(--cinza-claro);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.titulo{
+    color: var(--branco);
+    font-family: sans-serif;
+}

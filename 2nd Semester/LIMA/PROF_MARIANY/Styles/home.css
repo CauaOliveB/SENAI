@@ -1,0 +1,40 @@
+/* Remove margens padrão do body */
+body {
+        margin: 0;
+        padding: 0;
+        height: 100%;
+        display: flex;
+        justify-content: center;
+        align-items: center;
+    }
+    
+    .background {
+        position: relative;
+        width: 100vw;
+        height: 99.6vh;
+
+    }
+    
+    .background img {
+        width: 100%;
+        height: 100%;
+    }
+    
+    #startbnt {
+        position: absolute;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+    }
+    
+    #startbnt button {
+        background: none;
+        border: none;
+        cursor: pointer;
+    }
+    
+    #startbnt button img {
+        width: 600px;
+        height: auto;
+    }
+    

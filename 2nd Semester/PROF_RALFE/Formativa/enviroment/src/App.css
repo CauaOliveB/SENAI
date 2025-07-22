@@ -1,0 +1,37 @@
+:root {
+    --Light-Cyan :#CAF0F8;
+    --Non-Photo-Blue: #ADE8F4;
+    --Marian-Blue: #023e8a;
+    --Honolulu-Blue: #0077B6;
+    --Fandango: #B5179E;
+    --Grape: #7209B7;
+    --Dark-Blue: #480CA8;
+    --Chrysler-Blue: #560BAD;
+    --Zaffre: #3A0CA3;
+    --Rose-Pompadour: #FB6F92;
+    --Baker-Miller-pink: #FF8FAB;
+    --Cherry-blossom-pink: #FFB3C6;
+    --Pink:#FFC2D1;
+    --Misty-rose: #FFE5EC;
+    --Verdigris: #48a385;
+    --Emerald: #57CC99;
+    --Light-green: #78dfa6;
+    --Tea-green: #C7F9CC;
+    --Preto: #000;
+    --Branco: #fff;
+}
+
+*{
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+}
+
+
+.alumni-sans{
+    font-family: "Alumni Sans", sans-serif;
+    font-optical-sizing:auto;
+    font-weight: 200;
+    font-style:normal;
+  }
+  

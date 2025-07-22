@@ -1,0 +1,45 @@
+.container{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+    background-color: var(--Misty-rose);
+}
+
+.titulo{
+    font-size:1.5rem;
+    color:  var(----Baker-Miller-pink);
+    margin-bottom: 20px;
+    font-family: sans-serif;
+    font-size:xx-large;
+}
+
+
+.formulario{
+    display: flex;
+    flex-direction: column;
+    background-color: var(--Cherry-blossom-pink);
+    padding: 20px;
+    border-radius: 10px;
+}
+
+.campo{
+    padding: 10px 5px;
+    border-radius: 5px;
+    margin-bottom: 10px;
+}
+
+.botao{
+    background-color: var(--Rose-Pompadour);
+    color: aliceblue;
+    padding: 10px 5px;
+    border-radius: 5px;
+    font-weight: 400px;
+
+}
+
+.mensagem{
+    margin-bottom: 10px;
+    color: var(--Pink);
+}
