@@ -1,0 +1,17 @@
+$background: #FFFF;
+$primary: #1a2b4c;
+$secondary: #7c8c9a;
+$accent: #006A7a;
+$border-radius: 6px;
+$font: 10px;
+$main-font: 'Verdana';
+
+*{
+    margin:0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+body{
+    background-attachment: $background;
+}

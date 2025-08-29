@@ -1,0 +1,17 @@
+@use "./variables" as *;
+
+//Main conteiner 
+
+.conteiner{
+    max-width: 100vw;
+    padding: 4rem;
+    display: flex;
+    flex-direction: column;
+    background-color: $primary;
+    
+    .titulo{
+        font-size:18px;
+        color: $background;
+        font-family: $main-font;
+    }
+}
