@@ -4,8 +4,8 @@ export function NavBar() {
     return(
         <nav className="bar">
             <ul>
-                <li>Users register</li>
-                <li>Tasks register</li>
+                <li>Users Register</li>
+                <li>Tasks Register</li>
                 <li>Tasks Managment</li>
             </ul>
         </nav>
