@@ -1,3 +1,6 @@
-@use './variables';
+@use './variables' as *;
 @use './header';
 @use './navBar';
+@use './userCadaster';
+@use './taskCadaster';
+@use './taskManager';

@@ -8,9 +8,12 @@
     display: flex;
     flex-direction: column;
     background-color: $primary;
+    color: $text-light;
+    font-family: $main-font;
+    font-size: $font-header;
     
     .titulo{
-        font-size:18px;
+        font-size:25px;
         color: $background;
         font-family: $main-font;
     }

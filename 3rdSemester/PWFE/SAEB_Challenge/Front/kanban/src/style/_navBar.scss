@@ -2,18 +2,18 @@
 
 .bar {
     background-color: $primary;
-    color: $background;
-    font-size: 14px;
-    height: 40px;
-    width: 100vw;
+    color: $text-light;
+    font-size: 18px;
+    height: 30px;
+    margin: 0;
 
     ul {
         display: flex;
         flex-direction: row;
         justify-content: flex-end;
         max-width: 100vw;
-        padding: 6.7rem;
-        gap: 20px;
+        padding: 6rem;
+        gap: 30px;
     }
     li{
         text-decoration: none;

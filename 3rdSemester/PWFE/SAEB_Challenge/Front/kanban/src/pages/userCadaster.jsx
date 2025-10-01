@@ -12,13 +12,13 @@ const schemauserCadaster = z.object({
         .email("Email format Invalid")
 });
 
-export function userCadaster() {
+export function UserCadaster() {
     const {
         register,
         handleSubmit,
         formState: { errors },
         reset
-    } = useForm({
+        } = useForm({
         resolver: zodResolver(schemauserCadaster)
     });
 
@@ -42,5 +42,6 @@ export function userCadaster() {
                 <button type='submit'> Cadaster </button>
             </form>
         </section>
-    )
-}
+    );
+};
+
