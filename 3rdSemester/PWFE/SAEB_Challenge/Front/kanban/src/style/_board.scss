@@ -1,0 +1,9 @@
+@use './variables' as *;
+
+.conteiner{
+    background-color: $primary;
+
+    h1{
+        color: $accent;
+    }
+}

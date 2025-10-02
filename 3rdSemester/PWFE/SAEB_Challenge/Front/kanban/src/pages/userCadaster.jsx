@@ -28,8 +28,8 @@ export function UserCadaster() {
 
     return (
         <section className='Form'>
-            <h2>User Cadaster</h2>
             <form onSubmit={handleSubmit(obtainDatas)}>
+                <h2>User Register</h2>
 
                 <label>Name</label>
                 <input type="text" {...register('name')} placeholder=' Name Surname ' />

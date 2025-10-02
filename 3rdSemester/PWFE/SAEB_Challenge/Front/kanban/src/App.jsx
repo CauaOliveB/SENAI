@@ -1,13 +1,13 @@
-import { Header } from "./components/header";
-import { NavBar } from "./components/NavBar";
-import { UserCadaster } from "./pages/userCadaster";
+import { BrowserRouter } from "react-router-dom";
+import { RoutesFile } from "react-router-dom";
 
-function App() {
+
+ function App() {
   return (
     <>
-      <NavBar />
-      <Header />
-      <UserCadaster />
+      <BrowserRouter>
+        <RoutesFile />
+      </BrowserRouter>
     </>
   );
 }
