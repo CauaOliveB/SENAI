@@ -1,14 +1,14 @@
-import { BrowserRouter } from "react-router-dom";
-import { RoutesFile } from "react-router-dom";
+import { BrowserRouter } from "react-router-dom"
+import { Rotas } from "./Rotas/Rotas";
 
+//permite a navegação na aplicação, mexendo até o endereçamento
+function App() {
 
- function App() {
   return (
-    <>
-      <BrowserRouter>
-        <RoutesFile />
-      </BrowserRouter>
-    </>
-  );
+   <BrowserRouter>
+      <Rotas/>
+   </BrowserRouter>
+  )
 }
-export default App;
+
+export default App

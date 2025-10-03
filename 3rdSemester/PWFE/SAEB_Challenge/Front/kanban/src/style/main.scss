@@ -1,6 +1,12 @@
-@use './variables' as *;
-@use './header';
-@use './navBar';
-@use './userCadaster';
-@use './taskCadaster';
-@use './taskManager';
+@use './cabecalho';
+@use './variaveis';
+@use './cadUsuario';
+@use './cadTarefas';
+@use './quadro';
+@use './coluna';
+@use './tarefas';
+
+
+.error{
+    color: red;
+}
