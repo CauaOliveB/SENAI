@@ -1,4 +1,6 @@
-.containerColuna {
+@use './variables' as *;
+
+.columnConteiner{
     display: flex;
     align-items: center;
     flex-direction: column;
@@ -9,7 +11,7 @@
     gap: 20px;
 
 
-    .tituloColuna{
+    .columnTitle{
         color: rgb(255, 255, 255);
         font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
         font-weight: 800;

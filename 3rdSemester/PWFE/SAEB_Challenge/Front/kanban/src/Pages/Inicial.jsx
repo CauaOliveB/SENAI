@@ -1,12 +1,12 @@
 import { Outlet } from "react-router-dom";
-import { Cabecalho } from "../Componentes/Cabecalho";
-import { Quadro } from "../Componentes/Quadro"
+import { Header } from "../Componentes/Header";
+import { Board } from "../Componentes/Board"
 
 
 export function Inicial (){
     return(
         <>
-            <Cabecalho/>
+            <Header/>
             <Outlet/>
         </>
     )

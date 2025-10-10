@@ -1,10 +1,10 @@
-@use './cabecalho';
-@use './variaveis';
-@use './cadUsuario';
-@use './cadTarefas';
-@use './quadro';
-@use './coluna';
-@use './tarefas';
+@use './header';
+@use './variables';
+@use './cadUser';
+@use './cadTasks';
+@use './board';
+@use './column';
+@use './tasks';
 
 
 .error{

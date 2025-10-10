@@ -1,10 +1,10 @@
 import {Routes, Route} from 'react-router-dom';
-import { CadUsuario } from '../Paginas/CadUsuario'; 
-import { Quadro } from '../Componentes/Quadro';
-import { Inicial } from '../Paginas/Inicial';
-import {CadTarefas } from '../Paginas/CadTarefas';
-import { Tarefa } from '../Componentes/Tarefa';
-import AtualizarTarefa from '../Paginas/AtualizarTarefa';
+import { CadUser } from '../Pages/CadUser'; 
+import { Board } from '../Componentes/Board';
+import { Inicial } from '../Pages/Inicial';
+import {CadTask } from '../Pages/CadTask';
+import { Task } from '../Componentes/Task';
+import AtualizarTarefa from '../Pages/UpdateTask';
 
 
 export function Rotas(){
@@ -12,10 +12,10 @@ export function Rotas(){
         <>
             <Routes>
                 <Route path='/' element={<Inicial/>}>
-                    <Route path='cadUsuario' element={<CadUsuario/>}/>
-                    <Route path='cadTarefas' element={<CadTarefas/>}/>    
-                    <Route path='quadros' element={<Quadro/>}/>    
-                    <Route path='atualizarTarefas' element={<AtualizarTarefa />} />
+                    <Route path='cadasterUser' element={<CadUser/>}/>
+                    <Route path='cadTasks' element={<CadTask/>}/>    
+                    <Route path='boards' element={<Board/>}/>    
+                    <Route path='updateTask' element={<UpdateTask />} />
                 </Route>
             </Routes>
         </>

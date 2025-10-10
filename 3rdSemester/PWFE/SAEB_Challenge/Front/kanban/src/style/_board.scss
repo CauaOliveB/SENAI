@@ -1,9 +1,20 @@
 @use './variables' as *;
 
-.conteiner{
-    background-color: $primary;
+.board{
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100px;
+    background-color: rgb(44, 44, 44);
+    color: aliceblue;
+    margin-bottom: 40px;
+    font-family: 'Franklin Gothic Medium', 'Arial Narrow', Arial, sans-serif;
+    font-weight: 800;
+  
+}
 
-    h1{
-        color: $accent;
-    }
+.tasksCategories{
+    display: flex;
+    justify-content: space-evenly;
+    
 }
